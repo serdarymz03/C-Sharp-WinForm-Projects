@@ -42,7 +42,7 @@ namespace WinFormProjects_2
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            Student student = new Student(TxtName.Text, TxtMail.Text, MskPhone.Text, Convert.ToDateTime(MskBirthday.Text));
+            Student student = new Student(studentManager.GetMaxId(), TxtName.Text, TxtMail.Text, MskPhone.Text, Convert.ToDateTime(MskBirthday.Text));
             MessageBox.Show(studentManager.AddStudent(student));
             List();
         }
