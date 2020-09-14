@@ -30,10 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDashboard));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.DtgStudentList = new System.Windows.Forms.DataGridView();
+            this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.detayqaGitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yenileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.BtnAdd = new System.Windows.Forms.Button();
             this.MskBirthday = new System.Windows.Forms.MaskedTextBox();
@@ -44,13 +46,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TxtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.detayqaGitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yenileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtgStudentList)).BeginInit();
-            this.groupBox2.SuspendLayout();
             this.contextMenu.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -73,23 +72,36 @@
             this.DtgStudentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtgStudentList.ContextMenuStrip = this.contextMenu;
             this.DtgStudentList.Cursor = System.Windows.Forms.Cursors.PanWest;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DtgStudentList.DefaultCellStyle = dataGridViewCellStyle2;
             this.DtgStudentList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DtgStudentList.Location = new System.Drawing.Point(3, 20);
-            this.DtgStudentList.MultiSelect = false;
             this.DtgStudentList.Name = "DtgStudentList";
             this.DtgStudentList.ReadOnly = true;
             this.DtgStudentList.RowHeadersVisible = false;
             this.DtgStudentList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DtgStudentList.Size = new System.Drawing.Size(999, 396);
             this.DtgStudentList.TabIndex = 0;
+            // 
+            // contextMenu
+            // 
+            this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.detayqaGitToolStripMenuItem,
+            this.yenileToolStripMenuItem});
+            this.contextMenu.Name = "contextMenu";
+            this.contextMenu.Size = new System.Drawing.Size(181, 70);
+            // 
+            // detayqaGitToolStripMenuItem
+            // 
+            this.detayqaGitToolStripMenuItem.Name = "detayqaGitToolStripMenuItem";
+            this.detayqaGitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.detayqaGitToolStripMenuItem.Text = "Detaya Git";
+            this.detayqaGitToolStripMenuItem.Click += new System.EventHandler(this.detayqaGitToolStripMenuItem_Click);
+            // 
+            // yenileToolStripMenuItem
+            // 
+            this.yenileToolStripMenuItem.Name = "yenileToolStripMenuItem";
+            this.yenileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.yenileToolStripMenuItem.Text = "Yenile";
+            this.yenileToolStripMenuItem.Click += new System.EventHandler(this.yenileToolStripMenuItem_Click);
             // 
             // groupBox2
             // 
@@ -185,28 +197,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "İsim Soyad : ";
             // 
-            // contextMenu
-            // 
-            this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.detayqaGitToolStripMenuItem,
-            this.yenileToolStripMenuItem});
-            this.contextMenu.Name = "contextMenu";
-            this.contextMenu.Size = new System.Drawing.Size(181, 70);
-            // 
-            // detayqaGitToolStripMenuItem
-            // 
-            this.detayqaGitToolStripMenuItem.Name = "detayqaGitToolStripMenuItem";
-            this.detayqaGitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.detayqaGitToolStripMenuItem.Text = "Detaya Git";
-            this.detayqaGitToolStripMenuItem.Click += new System.EventHandler(this.detayqaGitToolStripMenuItem_Click);
-            // 
-            // yenileToolStripMenuItem
-            // 
-            this.yenileToolStripMenuItem.Name = "yenileToolStripMenuItem";
-            this.yenileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.yenileToolStripMenuItem.Text = "Yenile";
-            this.yenileToolStripMenuItem.Click += new System.EventHandler(this.yenileToolStripMenuItem_Click);
-            // 
             // FrmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -222,9 +212,9 @@
             this.Load += new System.EventHandler(this.FrmDashboard_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DtgStudentList)).EndInit();
+            this.contextMenu.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.contextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

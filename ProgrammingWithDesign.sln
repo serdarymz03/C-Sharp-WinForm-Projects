@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormProjects_2_Course", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormProjects_3_Calculator", "WinFormProjects_3_Calculator\WinFormProjects_3_Calculator.csproj", "{7DE7BCB4-9AA7-4AD2-A32A-08CD4B58E527}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormProjects_4_Basket", "WinFormProjects_4_Basket\WinFormProjects_4_Basket.csproj", "{50A44395-909D-4B9A-AFB3-1A1DD20CF322}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{7DE7BCB4-9AA7-4AD2-A32A-08CD4B58E527}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DE7BCB4-9AA7-4AD2-A32A-08CD4B58E527}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DE7BCB4-9AA7-4AD2-A32A-08CD4B58E527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50A44395-909D-4B9A-AFB3-1A1DD20CF322}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50A44395-909D-4B9A-AFB3-1A1DD20CF322}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50A44395-909D-4B9A-AFB3-1A1DD20CF322}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50A44395-909D-4B9A-AFB3-1A1DD20CF322}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

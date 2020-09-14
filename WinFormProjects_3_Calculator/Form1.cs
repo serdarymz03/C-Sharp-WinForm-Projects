@@ -148,7 +148,7 @@ namespace WinFormProjects_3_Calculator
             switch (process)
             {
                 case "Topla":
-                    result = number1 += number2;
+                    result = number1 + number2;
                     break;
                 case "Çıkar":
                     result = number1 - number2;

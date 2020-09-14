@@ -22,27 +22,29 @@ namespace WinFormProjects_2
 
         private void FrmDashboard_Load(object sender, EventArgs e)
         {
-            List();           
+            List();
         }
 
-        private void List()
+
+        void List()
         {
             DtgStudentList.DataSource = null;
             DtgStudentList.DataSource = studentManager.GetList();
             DataGridProps();
         }
+
         void DataGridProps()
         {
             DtgStudentList.Columns["Id"].Visible = false;
             DtgStudentList.Columns["Name"].HeaderText = "İsim";
-            DtgStudentList.Columns["Mail"].HeaderText = "E-mail";
+            DtgStudentList.Columns["Mail"].HeaderText = "E-Mail";
             DtgStudentList.Columns["Phone"].HeaderText = "Numara";
             DtgStudentList.Columns["Birthday"].HeaderText = "Doğum Tarihi";
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            Student student = new Student(TxtName.Text, TxtMail.Text, MskPhone.Text, Convert.ToDateTime(MskBirthday.Text));
+            Student student = new Student(studentManager.GetMaxId(), TxtName.Text, TxtMail.Text, MskPhone.Text, Convert.ToDateTime(MskBirthday.Text));
             MessageBox.Show(studentManager.AddStudent(student));
             List();
         }
